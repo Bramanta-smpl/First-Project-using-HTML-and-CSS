@@ -1,0 +1,142 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: navy;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    flex: 1;
+}
+
+/* Sidebar (nav) */
+nav {
+    flex: 1 1 20%; /* Fleksibel untuk layar kecil */
+    background-color: darkslateblue;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #7d7d7d;
+}
+
+/* Content (article) */
+article {
+    flex: 1 1 80%; /* Fleksibel untuk layar kecil */
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+
+article #social-media ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article #social-media a {
+    text-decoration: none;
+    color: black;
+}
+
+article #social-media a:hover {
+    color: rgb(137, 137, 137);
+}
+
+footer {
+    background-color: navy;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    section {
+        flex-direction: column; /* Sidebar dan konten menjadi vertikal */
+    }
+
+    nav, article {
+        flex: 1 1 100%; /* Lebar penuh untuk setiap bagian */
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding: 5px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    article {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+}
